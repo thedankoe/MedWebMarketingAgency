@@ -6,12 +6,6 @@ module.exports = {
     siteUrl: 'https://www.medwebmarketing.com',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -48,5 +42,12 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify',
   ],
 }

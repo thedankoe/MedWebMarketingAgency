@@ -131,12 +131,12 @@ const NavToggleItem = styled.li`
 
 class Nav extends Component {
   state = {
-    collapse: window.innerWidth,
+    collapse: '',
   }
 
   componentDidMount() {
     const el = document.querySelector('.nav-wrapper')
-    this.setState({ top: el.offsetTop })
+    this.setState({ top: el.offsetTop, collapse: window.innerWidth })
     window.addEventListener('scroll', this.handleScroll)
   }
 

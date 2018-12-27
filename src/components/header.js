@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Spring } from 'react-spring'
 import Nav from './nav'
 import { HeaderLinkStyle } from './styles/TextStyles'
@@ -173,5 +174,9 @@ const Header = ({ location }) => (
     )}
   </Spring>
 )
+
+Header.defaultProps = {
+  location: {},
+}
 
 export default Header

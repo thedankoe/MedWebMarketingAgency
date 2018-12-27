@@ -11,7 +11,7 @@ import {
 } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
-export const POST_ARCHIVE_QUERY = graphql`
+const POST_ARCHIVE_QUERY = graphql`
   query BlogPostArchive {
     allMarkdownRemark(
       limit: 5
