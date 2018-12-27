@@ -11,7 +11,7 @@ import {
 } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
-const POST_ARCHIVE_QUERY = graphql`
+const INDEX_POST_QUERY = graphql`
   query BlogPostArchive {
     allMarkdownRemark(
       limit: 5
@@ -85,7 +85,7 @@ const BlogHeading = styled(HeadingStyle)`
 
 const BlogSection = () => (
   <StaticQuery
-    query={POST_ARCHIVE_QUERY}
+    query={INDEX_POST_QUERY}
     render={({ allMarkdownRemark }) => (
       <BlogSectionWrapper>
         <BlogHeading>

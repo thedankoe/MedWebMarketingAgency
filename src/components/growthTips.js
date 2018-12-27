@@ -2,10 +2,35 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { POST_ARCHIVE_QUERY } from './blogSection'
 import { RightIcon } from './styles/IconStyles'
 import { SubHeadingStyle, ParagraphStyle, LinkStyle } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
+
+const GROWTH_POST_QUERY = graphql`
+  query BlogPostArchive {
+    allMarkdownRemark(
+      limit: 5
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            title
+            slug
+            featuredImage {
+              childImageSharp {
+                sizes(maxWidth: 400) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const GrowthWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
@@ -72,7 +97,7 @@ const ArchiveLink = styled(Link)`
 
 const GrowthTipsBlog = () => (
   <StaticQuery
-    query={POST_ARCHIVE_QUERY}
+    query={GROWTH_POST_QUERY}
     render={({ allMarkdownRemark }) => (
       <GrowthWrapper>
         <GrowthContainer>
