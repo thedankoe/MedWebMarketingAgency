@@ -22,10 +22,6 @@ const MarketingWrapper = styled.div`
     width: 80%;
   }
 
-  @media ${device.latopL} {
-    width: 90%;
-  }
-
   @media ${device.tablet} {
     grid-template-columns: 1fr;
   }

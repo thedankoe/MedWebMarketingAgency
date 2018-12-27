@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, Link } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { RightIcon } from './styles/IconStyles'
 import { SubHeadingStyle, ParagraphStyle, LinkStyle } from './styles/TextStyles'
 import { device } from './styles/MediaQueries'
 
 const GROWTH_POST_QUERY = graphql`
-  query BlogPostArchive {
+  query GrowthPostArchive {
     allMarkdownRemark(
       limit: 5
       sort: { order: DESC, fields: [frontmatter___date] }
