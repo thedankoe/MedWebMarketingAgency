@@ -98,7 +98,13 @@ const FormButton = styled.button`
 const ContactForm = () => (
   <FormWrapper>
     <FormHeading>Ready to get started? Have questions or concerns?</FormHeading>
-    <form name="contact" method="POST" data-netlify="true" action="/success">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      action="/success"
+      netlify-honeypot="bot-field"
+    >
       <FormGroup>
         <label htmlFor="name">Full Name</label>
         <input
