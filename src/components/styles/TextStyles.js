@@ -4,9 +4,17 @@ import { device } from './MediaQueries'
 
 const HeadingStyle = styled.h2`
   margin-bottom: ${props => props.theme.textSpace};
-  font-size: 3.2rem;
-  font-weight: 300;
+  font-size: 3.8rem;
+  font-weight: 700;
   text-align: center;
+  :after {
+    content: '';
+    height: 1px;
+    width: 150px;
+    margin: 1.5rem auto 0 auto;
+    background: ${props => props.theme.secondaryLight};
+    display: block;
+  }
   span {
     font-weight: 600;
   }
@@ -27,7 +35,11 @@ const SubHeadingStyle = styled.h3`
 
 const ParagraphStyle = styled.p`
   color: ${props => props.theme.grey};
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 400;
+  span {
+    font-weight: 600;
+  }
 `
 
 const LinkStyle = styled(Link)`
@@ -54,6 +66,21 @@ const LinkStyle = styled(Link)`
   }
 `
 
+const PlainLink = styled(Link)`
+  color: ${props => props.theme.primary};
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all ease 0.3s;
+  :hover {
+    color: ${props => props.theme.primaryLight};
+  }
+  svg {
+    transform: translateX(0.5rem);
+  }
+`
+
 const HeaderLinkStyle = styled(LinkStyle)`
   width: 15rem;
   margin: 0;
@@ -71,6 +98,10 @@ const HeaderLinkStyle = styled(LinkStyle)`
   @media ${device.tabletS} {
     margin: 0 auto;
   }
+`
+
+const CheckoutButton = styled(HeaderLinkStyle)`
+  margin: 0 auto;
 `
 
 const SecondaryLinkStyle = styled(LinkStyle)`
@@ -97,6 +128,15 @@ const FeedbackLinkStyle = styled(LinkStyle)`
   }
 `
 
+const ProblemLink = styled(FeedbackLinkStyle)`
+  width: 40rem;
+  transform: translateY(0);
+  :hover {
+    background: ${props => props.theme.secondaryLight};
+    transform: translateY(0.3rem);
+  }
+`
+
 export {
   HeadingStyle,
   SubHeadingStyle,
@@ -105,4 +145,7 @@ export {
   SecondaryLinkStyle,
   FeedbackLinkStyle,
   HeaderLinkStyle,
+  CheckoutButton,
+  ProblemLink,
+  PlainLink,
 }

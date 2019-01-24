@@ -29,8 +29,8 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: Raleway, sans-serif;
-    src: url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700');
+    src: url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+    font-family: Roboto, sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -55,13 +55,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.6rem;
     line-height: 1.7;
-    font-family: Raleway, sans-serif;
+    font-family: Roboto, sans-serif;
   }
   a {
-    font-family: Raleway, sans-serif;
+    font-family: Roboto, sans-serif;
     text-decoration: none;
   }
-  button {  font-family: Raleway, sans-serif; }
+  button {  font-family: Roboto, sans-serif; }
   ::selection {
     color: #fff;
     background: ${props => props.theme.secondaryLight};

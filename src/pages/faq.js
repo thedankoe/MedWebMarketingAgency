@@ -1,13 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import PricingOptions from '../components/pricingOptions'
 import FAQ from '../components/faq'
 
-const PricingPage = ({ location }) => (
+const FAQPage = ({ location }) => (
   <>
     <Helmet
-      title="Pricing | MedWeb Marketing"
+      title="FAQ | PrintWebMarketing"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -16,10 +15,9 @@ const PricingPage = ({ location }) => (
       <html lang="en" />
     </Helmet>
     <Layout location={location}>
-      <PricingOptions />
       <FAQ />
     </Layout>
   </>
 )
 
-export default PricingPage
+export default FAQPage

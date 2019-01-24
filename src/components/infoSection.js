@@ -14,6 +14,9 @@ import {
 const InfoWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
   margin: 0 auto;
+  padding: ${props => props.theme.textSpace};
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: ${props => props.theme.textSpace};

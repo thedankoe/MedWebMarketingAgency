@@ -9,7 +9,7 @@ import { device } from './styles/MediaQueries'
 
 const LeadSectionWrapper = styled.div`
   width: ${props => props.theme.maxWidth};
-  margin: 0 auto ${props => props.theme.sectionSpace} auto;
+  margin: ${props => props.theme.sectionSpace} auto;
 
   @media ${device.laptopL} {
     width: 95%;
@@ -17,13 +17,9 @@ const LeadSectionWrapper = styled.div`
 `
 
 const LeadSectionContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: ${props => props.theme.textSpace};
 `
 
 const LeadSectionItem = styled.div`
@@ -43,24 +39,12 @@ const LeadSectionItem = styled.div`
   }
 `
 
-const LeadHeading = styled(HeadingStyle)`
-  :after {
-    content: '';
-    height: 1px;
-    width: 150px;
-    margin: 1.5rem auto 0 auto;
-    background: ${props => props.theme.secondaryLight};
-    display: block;
-  }
-`
-
 const LeadSection = () => (
   <LeadSectionWrapper>
-    <LeadHeading>
-      Our <span>marketing strategies</span> and{' '}
-      <span>conversion centered websites</span> guarentee long term growth to
-      our clients
-    </LeadHeading>
+    <HeadingStyle>
+      Local marketing strategies and conversion centered websites guarentee long
+      term growth
+    </HeadingStyle>
     <LeadSectionContainer>
       <LeadSectionItem>
         <SubHeadingStyle>
@@ -78,10 +62,10 @@ const LeadSection = () => (
           3x web traffic increase for the first year
         </SubHeadingStyle>
         <ParagraphStyle>
-          Online advertisements make more website just a click away, but at a
-          cost. 10-20% of your monthly payments will go towards us optimizing
-          and creating targeted ads to jumpstart traffic. That is only the
-          beginning of traffic.
+          Online advertisements put your content in front of users who have
+          already expressed interest in buying! These alone offer a huge
+          opportunity to get specific visitors to your website, thus increasing
+          the amount of consistent customers (a lot being large companies).
         </ParagraphStyle>
       </LeadSectionItem>
     </LeadSectionContainer>

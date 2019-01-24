@@ -12,7 +12,6 @@ import { device } from './styles/MediaQueries'
 
 const FAQwrapper = styled.div`
   width: 100%;
-  margin-top: ${props => props.theme.sectionSpace};
   padding: 3rem 0;
   background-image: linear-gradient(
       to right bottom,

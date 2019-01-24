@@ -6,6 +6,7 @@ import ContactCTA from '../components/contactCTA'
 
 import Layout from '../components/layout'
 import { device } from '../components/styles/MediaQueries'
+import Team from '../components/team'
 
 const AboutPageHeadingLight = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -94,7 +95,7 @@ const AboutContainer = styled.div`
 const AboutPage = ({ location }) => (
   <>
     <Helmet
-      title="About | MedWeb Marketing"
+      title="About | PrintWebMarketing"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -125,7 +126,7 @@ const AboutPage = ({ location }) => (
             Search engine optimization, web design/development, content
             marketing, online advertisements, social media, and much more.
             Different industries have different customers, we work exclusively
-            with vape businesses because we understand it, and can offer immense
+            with print companies because we understand it, and can offer immense
             value and growth.
           </AboutParagraphLight>
         </AboutContainer>
@@ -139,12 +140,12 @@ const AboutPage = ({ location }) => (
             At the end of the day we are here for you. As business owners we
             both undertand that customers are what keeps our business alive and
             we don't want to have a bad relationship with them. We want your
-            business to succeed so that VapeSEO can grow and help you even more,
-            the benefits are mutual.
+            business to succeed so that PrintWebMarketing can grow and help you
+            even more, the benefits are mutual.
           </AboutParagraph>
         </AboutContainer>
       </AboutWrapper>
-      <ContactCTA />
+      <Team />
     </Layout>
   </>
 )

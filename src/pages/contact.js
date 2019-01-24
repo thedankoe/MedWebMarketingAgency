@@ -21,7 +21,7 @@ const ContactWrapper = styled.div`
 const PricingPage = ({ location }) => (
   <>
     <Helmet
-      title="Contact | MedWeb Marketing"
+      title="Contact | PrintWebMarketing"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },

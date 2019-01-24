@@ -1,9 +1,13 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: 'MedWeb Marketing | Marketing, SEO, Development',
+    title: 'PrintWebMarketing | Marketing, SEO, Development',
     description:
-      'Grow your medical practice with proven marketing strategies and conversion centered web design/development',
-    siteUrl: 'https://www.medwebmarketing.com',
+      'Grow your printing business with proven marketing strategies and conversion centered web design/development',
+    siteUrl: 'https://www.printwebmarketing.com',
   },
   plugins: [
     {
@@ -22,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'medwebmarketing.com',
-        short_name: 'MedWebMarketing',
+        name: 'printwebmarketing.com',
+        short_name: 'PrintWebMarketing',
         start_url: '/',
         icon: 'src/images/medweb-icon.png',
       },
@@ -42,10 +46,19 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Sku'],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: true,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-stripe',
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify',

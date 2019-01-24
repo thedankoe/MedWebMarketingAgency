@@ -100,12 +100,12 @@ function DynamicHeaderText({ location }) {
     return (
       <HeaderText>
         <HeaderHeadingHome>
-          Grow Your Medical Practice
+          Streamlined web services for printing companies
           <HeaderSubHeading>
-            With a tailored strategy for growth
+            With the most affordable SEO consulting on the market
           </HeaderSubHeading>
         </HeaderHeadingHome>
-        <HeaderLinkStyle to="/pricing">
+        <HeaderLinkStyle to="/services">
           Start Now
           <DownIcon />
         </HeaderLinkStyle>
@@ -128,10 +128,10 @@ function DynamicHeaderText({ location }) {
     )
   }
 
-  if (location.pathname === '/pricing') {
+  if (location.pathname === '/faq') {
     return (
       <HeaderText>
-        <HeaderHeading>Pricing</HeaderHeading>
+        <HeaderHeading>Frequently Asked Questions</HeaderHeading>
       </HeaderText>
     )
   }
@@ -159,12 +159,36 @@ function DynamicHeaderText({ location }) {
       </HeaderText>
     )
   }
+
+  if (location.pathname === '/services/basic') {
+    return (
+      <HeaderText>
+        <HeaderHeading>Basic Package</HeaderHeading>
+      </HeaderText>
+    )
+  }
+
+  if (location.pathname === '/services/standard') {
+    return (
+      <HeaderText>
+        <HeaderHeading>Standard Package</HeaderHeading>
+      </HeaderText>
+    )
+  }
+
+  if (location.pathname === '/services/premium') {
+    return (
+      <HeaderText>
+        <HeaderHeading>Premium Package</HeaderHeading>
+      </HeaderText>
+    )
+  }
 }
 
 const Header = ({ location }) => (
   <Spring
-    from={{ height: location.pathname === '/' ? 300 : 500 }}
-    to={{ height: location.pathname === '/' ? 500 : 300 }}
+    from={{ height: location.pathname === '/' ? 300 : 600 }}
+    to={{ height: location.pathname === '/' ? 600 : 300 }}
   >
     {props => (
       <HeaderWrapper style={props}>

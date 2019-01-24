@@ -5,11 +5,11 @@ import {
   HeadingStyle,
   SubHeadingStyle,
   ParagraphStyle,
-} from '../components/styles/TextStyles'
-import Layout from '../components/layout'
-import { device } from '../components/styles/MediaQueries'
-import Buy from '../components/buy'
-import ServicesSection from '../components/servicesSection'
+} from '../../components/styles/TextStyles'
+import Layout from '../../components/layout'
+import { device } from '../../components/styles/MediaQueries'
+import Buy from '../../components/buy'
+import ServicesSection from '../../components/servicesSection'
 
 const MarketingPageHeading = styled(HeadingStyle)`
   width: ${props => props.theme.maxWidth};
@@ -64,7 +64,7 @@ const MarketingEnd = styled.h4`
 `
 
 const MarketingEndParagraph = styled.p`
-  width: 50%;
+  width: 60%;
   margin: 1rem auto ${props => props.theme.textSpace} auto;
   text-align: center;
   font-size: 1.8rem;
@@ -81,7 +81,7 @@ const MarketingEndParagraph = styled.p`
 const MarketingSolutionsPage = ({ location }) => (
   <>
     <Helmet
-      title="Marketing Solutions | PrintWebMarketing"
+      title="Marketing Solutions | MedWeb Marketing"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -127,7 +127,7 @@ const MarketingSolutionsPage = ({ location }) => (
         base.
       </MarketingEndParagraph>
       <MarketingEndParagraph>
-        All credible print companies have effective websites that showcase their
+        All credible Vape businesses have effective websites that showcase their
         amazing products and it results in more customers and higher profits.
       </MarketingEndParagraph>
       <Buy location={location} />

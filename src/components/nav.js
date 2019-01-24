@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import './styles/nav.css'
-import { Spring } from 'react-spring'
 import { ToggleIcon } from './styles/IconStyles'
 import Toggle from './toggle'
 
@@ -158,13 +157,13 @@ class Nav extends Component {
           <NavContainer>
             <NavList>
               <Logo to="/">
-                MedWeb<span>Marketing</span>
+                PrintWeb<span>Marketing</span>
               </Logo>
               <NavItem>
                 <Link to="/services">Services</Link>
               </NavItem>
               <NavItem>
-                <Link to="/pricing">Pricing</Link>
+                <Link to="/faq">FAQ</Link>
               </NavItem>
               <NavItem>
                 <Link to="/about">About</Link>
@@ -180,7 +179,7 @@ class Nav extends Component {
         ) : (
           <NavToggleContainer>
             <Logo to="/">
-              MedWeb<span>Marketing</span>
+              PrintWeb<span>Marketing</span>
             </Logo>
             <Toggle>
               {({ on, toggle }) => (
@@ -194,7 +193,7 @@ class Nav extends Component {
                         <Link to="/services">Services</Link>
                       </NavToggleItem>
                       <NavToggleItem>
-                        <Link to="/pricing">Pricing</Link>
+                        <Link to="/faq">FAQ</Link>
                       </NavToggleItem>
                       <NavToggleItem>
                         <Link to="/about">About</Link>

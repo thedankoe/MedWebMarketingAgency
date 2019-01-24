@@ -62,7 +62,7 @@ const FooterNavItem = styled.li`
 const Footer = () => (
   <FooterWrapper>
     <HeadingStyle>
-      <span>MedWeb</span>Marketing
+      <span>PrintWeb</span>Marketing
     </HeadingStyle>
     <FooterContainer>
       <nav>
@@ -84,7 +84,7 @@ const Footer = () => (
           </FooterNavItem>
         </FooterNavList>
       </nav>
-      <ParagraphStyle>&copy; MedWeb Marketing 2018</ParagraphStyle>
+      <ParagraphStyle>&copy; 2018 PrintWebMarketing</ParagraphStyle>
     </FooterContainer>
   </FooterWrapper>
 )

@@ -21,7 +21,7 @@ const BlogPageHeading = styled(HeadingStyle)`
 const BlogPage = ({ location }) => (
   <>
     <Helmet
-      title="Blog | MedWeb Marketing"
+      title="Blog | PrintWebMarketing"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },

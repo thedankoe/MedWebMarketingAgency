@@ -27,6 +27,7 @@ const AnalysisHeading = styled(HeadingStyle)`
 
 const AnalysisSubHeading = styled(SubHeadingStyle)`
   color: #fff;
+  font-weight: 300;
 
   @media ${device.tabletL} {
     font-size: 2rem;
